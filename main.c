@@ -727,6 +727,35 @@ int main()
 //    }
 
     /* 练习1-21 编写程序entab，将空格串替换为最少数量的制表符和空格，但要保持单词之间的间隔不变。*/
+//    int c, nb, nt, pos;
+//
+//    nb = 0;                 /* number of blanks necessary */
+//    nt = 0;                 /* number of tabs necessary */
+//    for (pos = 1; (c = getchar()) != EOF; ++pos)
+//        if (c == ' '){
+//            if (pos % TABINC != 0)
+//                ++nb;               /* increment # of blanks */
+//            else{
+//                nb = 0;             /* reset # of blanks */
+//                ++nt;               /* one more tab */
+//            }
+//        } else {
+//            for ( ; nt > 0; --nt)
+//                putchar('\t');
+//            if(c == '\t')
+//                nb = 0;
+//            else
+//                for( ; nb > 0; --nb)
+//                    putchar(' ');
+//            putchar(c);
+//            if (c == '\n')
+//                pos = 0;
+//            else if (c == '\t')
+//                pos = pos + (TABINC - (pos -1) % TABINC) -1;
+//        }
+
+    /* 练习1-22 编写一个程序，把较长的输入行“折”成短一些的两行或多行，折行的位置在输入行的第n列之前的最后一个非空格之后。要保证程序能够智能地粗粝输入行很长以及在指定的列前没有空格或制表符时的情况 */
+
 
 
 
