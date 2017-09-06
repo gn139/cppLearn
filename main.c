@@ -22,7 +22,7 @@ char longest[MAXLINE];      /* 用于保存最长的行 */
 int power( int m, int n);
 int f2c(int fahr);
 float celsius(float fahr);
-int getline(char line[], int maxline);
+int getLine(char line[], int maxline);
 void copy(char to[], char from[]);
 int getRightLine(char line[]);
 int rmove(char line[]);
@@ -632,7 +632,7 @@ int main()
     extern char longest[MAXLINE];
 
     max = 0;
-    while ((len = getline(line, MAXLINE)) > 0)
+    while ((len = getLine(line, MAXLINE)) > 0)
         if(len > max){
             max = len;
             copy(longest, line);
@@ -834,7 +834,7 @@ int getRightLine(char s[])
 }
 
 /* getline函数：将一行读入到s中并返回其长度 */
-int getline(char s[], int lim)
+int getLine(char s[], int lim)
 {
 //    int c, i;
 //
